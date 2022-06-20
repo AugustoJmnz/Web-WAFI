@@ -15,10 +15,11 @@
    
 
 			<h4>Registro</h4>
-		<form class="form_reg" action="{{ url('formulario') }}" method="POST" >
-            @csrf
-           {{--<p>Id del producto:{{$elidform}}</p>--}} 
-            @yield('cuerpo')
+		<form class="form_reg" action="{{ url('subirimagenes') }}" method="POST" enctype="multipart/form-data">
+            @csrf 
+             
+             {{-- <p>Id del producto:{{$elidform}}</p> 
+          
 			<input name="tour" value="{{old('tour')}}" class="input" type="text" placeholder="Nombre del tour" required autofocus>
             @error('tour')
             {{$message}}
@@ -39,9 +40,14 @@
             @error('descp')
             {{$message}}
             @enderror
-            
+            --}}
+            <input type="file" name="fotografia" value="{{old('fotografia')}}" placeholder="Subir imagen">
+            @yield('cuerpo')
+            @error('fotografia')
+            {{$message}}
+            @enderror
             <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-            <button class="btn" type="submit">Enviar</button>
+            <button class="btn" type="submit">Enviar/Subir imagen</button>
 
                 <p><a href="#">¿Ya se ha registrado?</a></p>
 		</form>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormularioRequest;
 use Illuminate\Http\Request;
 
 class EstudianteController extends Controller
@@ -19,13 +20,17 @@ class EstudianteController extends Controller
     }
 
     //Método para procesar el formulario
-    public function store(Request $request)
+    
+    public function store(FormularioRequest $request) 
     {
-        return
-            "Tour: " . $request->input('tour') . "<br/>" .
-            "Precio: " . $request->input('precio') . "<br/>" .
-            "Guia: " . $request->input('guia') . "<br/>" .
-            "Amenidades: " . $request->input('amen') . "<br/>" .
-            "Descripcion: " . $request->input('descp');
+        return view('respuestas');
+
+        "Tour: " . $request->input('tour') . "<br/>" .
+        "Precio: " . $request->input('precio') . "<br/>" .
+         "Guia: " . $request->input('guia') . "<br/>" .
+         "Amenidades: " . $request->input('amen') . "<br/>" .
+         "Descripcion: " . $request->input('descp');
+
     }
 }
+

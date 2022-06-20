@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\DocentesController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\FotografiaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,3 +65,15 @@ Route::post('formulario', [EstudianteController::class, 'store']);
 
 //create es para mostrar el formulario
 //store es para guardar, procese el formulario
+
+
+//Formulario para subir imagenes
+Route::get('fotos', [FotografiaController::class, 'create']);
+Route::post('fotos', [FotografiaController::class, 'store']);
+
+
+//Crear una ruta en web.php (Se usa el método create)
+Route::get('formulario2', [DocentesController::class, 'create']);
+
+//Crear otra ruta y usar otro método --> post
+Route::post('formulario2', [DocentesController::class, 'store']);
