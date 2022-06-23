@@ -73,7 +73,9 @@ Route::post('fotos', [FotografiaController::class, 'store']);
 
 
 //Crear una ruta en web.php (Se usa el método create)
+//Trae formulario
 Route::get('formulario2', [DocentesController::class, 'create']);
 
 //Crear otra ruta y usar otro método --> post
+//Procesa el formulario
 Route::post('formulario2', [DocentesController::class, 'store']);

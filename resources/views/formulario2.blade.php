@@ -12,7 +12,6 @@
 <body> 
    
 <div class="container">
-
 			<h4>Registro</h4>
 		<form class="form_reg" action="{{ url('formulario2') }}" method="POST" >
             @csrf

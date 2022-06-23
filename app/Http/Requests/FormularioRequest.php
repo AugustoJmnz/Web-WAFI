@@ -36,11 +36,7 @@ class FormularioRequest extends FormRequest
             'amen' => 'bail|required|alpha',
             'descp' => 'bail|required|alpha',
 
-            //FORMLUARIO2
-            'nombre' => 'bail|required|alpha',
-            'apellidos' => 'bail|required|alpha',
-            'area' => 'bail|required|alpha',
-            'numero_nomina' => 'bail|required|numeric'
+
 
         ];
     }
